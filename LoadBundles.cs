@@ -17,7 +17,7 @@ namespace NodeLoader
         public static void LoadNode(UnityDisplayNode node, string prefabName, BloonsMod mod)
         {
             node.GetRenderer<SpriteRenderer>().sprite = null;
-            var bundle = GetBundle(mod, "ror2-dlc1-voidsurvivor_bin_assets_all"); //mdlVoidSurvivor
+            var bundle = GetBundle(mod, "voidfiend"); //mdlVoidSurvivor
             var prefab = bundle.LoadAssetAsync(prefabName, Il2CppType.Of<uObject>()).asset;
             var eeveeGameObject = GameObject.Instantiate(prefab, node.transform .GetChild (0).transform);
             node.transform.GetChild(0).transform.localScale *= 15;
